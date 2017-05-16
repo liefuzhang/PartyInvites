@@ -11,6 +11,7 @@ namespace LanguageFeatures.Models
         public string Category { get; set; } = "Watersports";
         public Product Related { get; set; }
         public bool InStock { get; } = true;
+        public bool NameBeginsWithS => Name?[0] == 'S';
 
         public static Product[] GetProducts() {
             Product kayak = new Product {
